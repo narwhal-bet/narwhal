@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه ورود</title>
+    <style>
+        #secretSection {
+            display: none; /* مخفی کردن بخش ویژه */
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        #error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>به سایت خوش آمدید</h1>
+    <label for="password">رمز عبور:</label>
+    <input type="password" id="password">
+    <button onclick="checkPassword()">ورود</button>
+    <div id="error-message"></div>
+
+    <div id="secretSection">
+        <h2>بخش ویژه</h2>
+        <p>شما به این بخش دسترسی پیدا کردید!</p>
+    </div>
+
+    <script>
+        const correctPassword = "123456"; // رمز عبور صحیح
+
+        function checkPassword() {
+            const passwordInput = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            const secretSection = document.getElementById('secretSection');
+
+            if (passwordInput === correctPassword) {
+                // نمایش بخش ویژه
+                secretSection.style.display = "block";
+                errorMessage.textContent = ""; // پاک کردن پیام خطا
+            } else {
+                // نمایش پیام خطا
+                errorMessage.textContent = "رمز عبور نادرست است. لطفاً دوباره تلاش کنید.";
+                secretSection.style.display = "none"; // مخفی کردن بخش ویژه
+            }
+        }
+    </script>
+
+</body>
+</html>

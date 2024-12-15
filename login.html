@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه ورود</title>
+    <style> body {
+        font-family: Arial, sans-serif;
+        background-color: #001f3f; /* آبی دارک */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .login-container {
+        background-color: #003366; /* آبی تیره */
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    input[type="password"] {
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        width: 80%;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #00509e; /* آبی میانه */
+        border: none;
+        color: rgb(0, 213, 255);
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+    
+    button:hover {
+        background-color: #007acc; /* تغییر رنگ دکمه هنگام هاور */
+    }
+    
+    .error {
+        color: red;
+        margin-top: 10px;
+    }</style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>ورود به سایت</h2>
+    <input type="password" id="password" placeholder="رمز عبور را وارد کنید">
+    <button onclick="checkPassword()">ورود</button>
+    <div class="error" id="error-message"></div>
+</div>
+
+<script>const correctPassword = "4054"; // رمز عبور صحیح را اینجا وارد کنید
+
+    function checkPassword() {
+        const passwordInput = document.getElementById('password').value;
+        const errorMessage = document.getElementById('error-message');
+    
+        if (passwordInput === correctPassword) {
+            // اگر رمز عبور صحیح بود، به صفحه اصلی هدایت می‌شود
+            window.location.href = "narwhal.html"; // آدرس صفحه اصلی را اینجا وارد کنید
+        } else {
+            // اگر رمز عبور نادرست بود، پیام خطا نمایش داده می‌شود
+            errorMessage.textContent = "رمز عبور نادرست است. لطفاً دوباره تلاش کنید.";
+        }
+    }</script>
+</body>
+</html>

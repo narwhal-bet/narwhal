@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narwhal Bet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Narwhal Bet</h1>
+    <h2>vip signals</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+<nav class="navbar">
+    <ul>
+        <li><a href="#about">درباره ما</a></li>
+        <li><a href="signal.html">سیگنال‌ها</a></li>
+        <li><a href="win.html">وین‌ها</a></li>
+        <li><a href="narwhal.html">خانه</a></li>
+        
+    </ul>
+</nav>
+<div class="container pro"><input type="text" id="searchInput" placeholder="جستجو در سیگنال‌ها..." 
+    onkeyup="searchSignals()"></div>
+    <div class="container pro"id="secretSection">
+        <section id="signals">
+            <h2>سیگنال ویژه</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <h3>سیگنال 1</h3>
+                    <img src="" alt="سیگنال وجود ندارد تا فردا صبر کنید">
+                </div>
+                <div class="product-item">
+                    <h3>سیگنال 2</h3>
+                    <img src="" alt="سیگنال وجود ندارد تا فردا صبر کنید">
+    
+                    <p>تیم C vs تیم D - پیش‌بینی: تساوی</p>
+                </div>
+                <div class="product-item">
+                    <h3>سیگنال 3</h3>
+                    <img src="" alt="سیگنال وجود ندارد تا فردا صبر کنید">
+                </div>
+            </div>
+            <div class="product-item back pro">
+                <a href="narwhal.html">بازگشت</a>
+        </div>
+    </div>
+ 
+    <script>
+        function searchSignals() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const signalList = document.getElementById('signals');
+            const signals = signalList.getElementsByTagName('div');
+    
+            for (let i = 0; i < signals.length; i++) {
+                const signal = signals[i].textContent.toLowerCase();
+                if (signal.includes(input)) {
+                    signals[i].style.display = '';
+                } else {
+                    signals[i].style.display = 'none';
+                }
+            }
+        }
+        function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+    }
+    </script>
+</div>
+<footer>
+    <p>&copy;narwhal.bet</p>
+</footer>
+</body>
+</html>

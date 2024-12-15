@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narwhal Bet</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #secretSection {
+    display: none; 
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Narwhal Bet</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#about">درباره ما</a></li>
+        <li><a href="signal.html">سیگنال‌ها</a></li>
+        <li><a href="win.html">وین‌ها</a></li>
+        <li><a href="narwhal.html">خانه</a></li>
+        
+    </ul>
+</nav>
+
+<div class="container">
+    <section id="signals">
+        <h2>سیگنال‌ها</h2>
+        <div class="product-list">
+            <div class="product-item">
+                
+                <h3>سیگنال 1</h3>
+                <img src="" alt="سیگنال وجود ندارد تا فردا صبر کنید">
+                <p></p>
+            </div>
+            <div class="product-item">
+                <h3>سیگنال 2</h3>
+                <img src="" alt="سیگنال وجود ندارد تا فردا صبر کنید">
+
+                <p></p>
+            </div>
+            <div class="product-item">
+                <h3>سیگنال 3</h3>
+                <img src="" alt="سیگنال وجود ندارد تا فردا صبر کنید">
+                <p></p>
+            </div>
+        </div>
+        <div class="product-item back">
+            <a href="signal.html">همه سیگنال‌ها</a>
+    </div>
+    </section>
+</div>
+<div  class="container">
+    <section id="wins">
+        <h2>وین‌ها</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <h3>وین 1</h3>
+                <img src="وین/IMG_20241216_193833_346.jpg" alt="">
+                <p></p>
+            </div>
+            <div class="product-item">
+                <h3>وین 2</h3>
+                <img src="وین/IMG_20241216_193833_326.jpg" alt="">
+                <p>سیگنال 2 - نتیجه: باخت</p>
+            </div>
+            <div class="product-item">
+                <h3>وین 3</h3>
+                <img src="وین/IMG_20241216_193833_292.jpg" alt="">
+                <p></p>
+            </div>
+        </div>
+        <div class="product-item back">
+            <a href="win.html">همه وین ها</a>
+    </div>
+    </section>
+</div>
+<div class="container pro"id="secretSection">
+    <section id="signals">
+        <h2>سیگنال ویژه</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <h3>سیگنال 1</h3>
+                <img src="" alt="سیگنال وجود ندارد تا فردا صبر کنید">
+            </div>
+            <div class="product-item">
+                <h3>سیگنال 2</h3>
+                <img src="" alt="سیگنال وجود ندارد تا فردا صبر کنید">
+
+             
+            </div>
+            <div class="product-item">
+                <h3>سیگنال 3</h3>
+                <img src="" alt="سیگنال وجود ندارد تا فردا صبر کنید">
+                
+            </div>
+        </div>
+        <div class="product-item back ">
+            <a href="signal.html">همه سیگنال‌ها</a>
+    </div>
+</div>
+<div class="container">
+<label for="password">کد اشتراک ویژه :</label>
+    <input type="password" id="password">
+    <button style="margin: 10px ;" onclick="checkPassword()">ثبت</button>
+    <div id="error-message"></div>
+</div>
+<div class="container">
+    <section id="about">
+        <h2>درباره ما</h2>
+        <p>ما یک تیم متخصص در زمینه تحلیل‌های ورزشی هستیم که به شما کمک می‌کنیم تا بهترین تصمیمات را در شرط بندی بگیرید.</p>
+        <h2>اشتراک ویژه</h2>
+        <p>برای دریافت اشتراک ویژه به ادمین مراجعه فرمایید</p>
+        <h2>راه های ارتباطی </h2>
+        <a href="https://t.me/Narwhal_bet">تلگرام</a>
+        <div><a href="https://www.instagram.com/narwhal.bet?igsh=MXFzbnFxMjlucHpkdQ==">اینستاگرام</a></div>
+    </section>
+</div>
+<footer>
+    <p>&copy;narwhal.bet</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+    }
+    const correctPassword = "a30d70"; // رمز عبور صحیح
+
+function checkPassword() {
+    const passwordInput = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
+    const secretSection = document.getElementById('secretSection');
+
+    if (passwordInput === correctPassword) {
+        // نمایش بخش ویژه
+        secretSection.style.display = "block";
+        errorMessage.textContent = ""; // پاک کردن پیام خطا
+    } else {
+        // نمایش پیام خطا
+        errorMessage.textContent = "رمز عبور نادرست است. لطفاً دوباره تلاش کنید.";
+        secretSection.style.display = "none"; // مخفی کردن بخش ویژه
+    }
+}
+
+</script>
+
+</body>
+</html>
