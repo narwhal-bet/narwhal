@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تغییر عکس</title>
+    <style>
+        #image {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>تغییر عکس</h1>
+    <img id="image" src="https://via.placeholder.com/300x200.png?text=عکس+1" alt="عکس">
+    
+    <div class="button-container">
+        <button onclick="prevImage()">قبلی</button>
+        <button onclick="nextImage()">بعدی</button>
+    </div>
+
+    <script>
+        const images = [
+            "img/IMG_20241217_174802_429.jpg?text=عکس+1",
+            "https://via.placeholder.com/300x200.png?text=عکس+2",
+            "https://via.placeholder.com/300x200.png?text=عکس+3"
+        ];
+        
+        let currentIndex = 0;
+
+        function updateImage() {
+            const imgElement = document.getElementById('image');
+            imgElement.src = images[currentIndex];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            updateImage();
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            updateImage();
+        }
+    </script>
+
+</body>
+</html>
