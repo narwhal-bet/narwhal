@@ -18,7 +18,8 @@
     <ul>
         <li><a href="#about">درباره ما</a></li>
         <li><a href="signal.html">سیگنال‌ها</a></li>
-        <li><a href="win.html">وین‌ها</a></li>        <li><a href="index.html">خانه</a></li>
+        <li><a href="win.html">وین‌ها</a></li>     
+           <li><a href="index.html">خانه</a></li>
      
 
         
@@ -86,5 +87,27 @@
     <footer>
         <p>&copy;narwhal.bet</p>
     </footer>
+</section>
+ 
+<script>
+    function searchSignals() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const signalList = document.getElementById('signals');
+        const signals = signalList.getElementsByTagName('div');
+
+        for (let i = 0; i < signals.length; i++) {
+            const signal = signals[i].textContent.toLowerCase();
+            if (signal.includes(input)) {
+                signals[i].style.display = '';
+            } else {
+                signals[i].style.display = 'none';
+            }
+        }
+    }
+    function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+}
+</script>
     </body>
     </html>
