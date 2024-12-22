@@ -173,8 +173,9 @@ div .back{
 }
 
 .footer-menu a {
-    color: gold;
-    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+    
 }
 
 .footer-menu a:hover {
