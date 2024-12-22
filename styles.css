@@ -151,3 +151,36 @@ div .back{
 .button-container {
     margin-top: 20px;
 }
+.footer-menu {
+    background-color: #003366;
+    color: gold;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-menu a {
+    color: gold;
+    text-decoration: none;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+.footer-menu img{
+    width: 20px;
+    height: 100%;
+}
