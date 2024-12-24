@@ -188,3 +188,22 @@ div .back{
     width: 20px;
     height: 100%;
 }
+
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none; /* پنهان کردن تمام اسلایدها */
+}
+
+.slide img {
+    width: 100%; /* تنظیم عرض تصویر */
+    border-radius: 15px;
+}
+.slide p{
+    text-align: center;
+}

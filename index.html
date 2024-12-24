@@ -31,10 +31,32 @@
         
     </ul>
 </nav>
+<div  class="container">
+  
+        <h2>وین‌ها</h2>
+        <div class="product-list">
+            <div class="product-item slideshow-container">
+                    <div class="slide fade">
+                        <img src="new/6005573090219771305.jpg" alt="عکس 1">
+                       <p> فولاد vs خوزستان</p>
+                    </div>
+                    <div class="slide fade">
+                        <img src="new/6005573090219771306.jpg" alt="عکس 2">
+                         <p>کویت vs امارات</p>
+                    </div>
+                    <div class="slide fade">
+                        <img src="new/6005573090219771307.jpg" alt="عکس 3">
+                        <p> قطر vs عمان</p>
+                    </div>
+                    <!-- می‌توانید تصاویر بیشتری اضافه کنید -->
+            </div>
+        </div>
+    
+</div>
 
 <div class="container">
     <section id="signals">
-        <h2>سیگنال‌های امروز</h2>
+        <h2>سیگنال‌های . امروز</h2>
         <div class="product-list">
             <div class="product-item">
                 <div class="gallery">
@@ -129,32 +151,8 @@
 </div>
 
 
-<script>
-    function toggleMenu() {
-        const navbar = document.querySelector('.navbar');
-        navbar.classList.toggle('active');
-    }
-    const correctPassword = "a30d70";
-
-function checkPassword() {
-    const passwordInput = document.getElementById('password').value;
-    const errorMessage = document.getElementById('error-message');
-    const secretSection = document.getElementById('secretSection');
-
-
-    if (passwordInput === correctPassword) {
-        // نمایش بخش ویژه
-        secretSection.style.display = "block";
-        errorMessage.textContent = ""; // پاک کردن پیام خطا
-    } else {
-        // نمایش پیام خطا
-        errorMessage.textContent = "رمز عبور نادرست است. لطفاً دوباره تلاش کنید.";
-        secretSection.style.display = "none"; // مخفی کردن بخش ویژه
-    }
-}
-
-
-</script>
+<script src="pas.js"></script>
+<script src="script2.js"></script>
 <script src="script.js"></script>
 
 </body>
