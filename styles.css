@@ -90,6 +90,7 @@ h2 {
 {
 size: 20px;
 width: 100%;
+border-radius: 15px;
 }
 
 button {
@@ -200,7 +201,7 @@ div .back{
     display: none; /* پنهان کردن تمام اسلایدها */
 }
 
-img {
+.slide img {
     width: 100%; /* تنظیم عرض تصویر */
     border-radius: 15px;
 }
