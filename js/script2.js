@@ -12,7 +12,7 @@ function showSlides() {
     if (slideIndex > slides.length) { slideIndex = 1 } // بازگشت به اولین اسلاید
     
     slides[slideIndex - 1].style.display = "block"; // نمایش اسلاید فعلی
-    setTimeout(showSlides, 3000); // تغییر اسلاید بعدی هر 3 ثانیه
+    setTimeout(showSlides, 300); // تغییر اسلاید بعدی هر 3 ثانیه
 }
 
 // شروع نمایش اسلایدها
